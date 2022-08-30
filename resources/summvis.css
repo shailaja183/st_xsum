@@ -1,0 +1,347 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #262730;
+    font-weight: 400;
+}
+
+.vis-container {
+    height: 670px;
+    background-color: #F5F7F9;
+}
+
+.nodisplay {
+    display: none !important;
+}
+
+.scroll {
+    overflow-y: scroll;
+}
+
+.doc-container {
+    padding: 10px 20px;
+}
+
+.horizontal-layout .doc-container {
+    padding-bottom: 0px;
+}
+
+.vertical-layout .doc-container {
+    float: left;
+    width: 50%;
+    padding-right: 0px;
+}
+
+.summary-container {
+    padding: 0px 20px;
+}
+
+.vertical-layout .summary-container {
+    float: left;
+    width: 50%;
+    padding-top: 8px;
+}
+
+.vertical-layout .main-doc.scroll {
+    height: 610px;
+}
+
+.main-doc.scroll {
+    scrollbar-width: none;
+}
+
+/* Works on Chrome, Edge, and Safari */
+.main-doc.scroll::-webkit-scrollbar {
+    width: 0;
+}
+
+.vertical-layout .proxy-doc {
+    height: 610px;
+}
+
+.vertical-layout .summary-list.scroll {
+    height: 610px;
+}
+
+.horizontal-layout .scroll {
+    height: 270px;
+}
+
+.doc {
+    display: flex;
+}
+
+.horizontal-layout .doc {
+}
+
+.main-doc {
+    background-color: white;
+    padding-left: 17px;
+    padding-right: 15px;
+    padding-top: 16px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    flex: 1;
+    border: 1px solid #e9e9e9;
+}
+
+.display .proxy-scroll {
+    position: absolute;
+    left: 9px;
+    width: 9px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.display .proxy-scroll.hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.proxy-doc {
+    flex: 0 0 28px;
+    background-color: white;
+    position: relative;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-top: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.vertical-layout .proxy-doc {
+    margin-right: 25px;
+}
+
+.summary-list {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.summary-item {
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: white;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 23px;
+    padding-right: 8px;
+}
+
+.summary-item:last-child {
+    border-bottom: 0px;
+    border-bottom-left-radius: 3px;
+}
+
+.summary-item.selected.selectable {
+    border-left: 3px solid #2377E9;
+    padding-left: 21px;
+}
+
+.summary-item.selectable:not(.selected):hover {
+    cursor: pointer;
+    background-color: #FCFDFF;
+}
+
+.summary-item.selected.selectable .highlight:not(.annotation-hidden):hover {
+    cursor: pointer;
+}
+
+.summary-item.selected.selectable .underline:not(.annotation-hidden):hover {
+    cursor: pointer;
+}
+
+.summary-item .name {
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.summary-item.selected.selectable .name {
+    font-weight: 500;
+}
+
+.inactive {
+    opacity: 0.5 !important;
+}
+
+.stopword.grayed-out {
+    opacity: 50%
+}
+
+.has-lexical-alignment .annotate-novel {
+    /* Bold all non-underlined items */
+    font-weight: 500;
+    color: black;
+}
+
+.summary-item .stopword {
+    font-weight: 400;
+}
+
+.summary-item .token-underline {
+    font-weight: 400;
+}
+
+.summary-item:not(.selected) .underline, .summary-item:not(.selectable) .underline {
+    border-color: #909090 !important;
+}
+
+.underline.annotation-inactive {
+    border-color: #E9E9E9 !important;
+}
+
+.underline.annotation-invisible {
+    border-color: transparent !important;
+}
+
+.underline.annotation-hidden {
+    border: 0px !important;
+    margin: 0px !important;
+}
+
+.proxy-underline.annotation-hidden, .proxy-highlight.annotation-hidden {
+    visibility: hidden;
+}
+
+.proxy-underline.annotation-inactive {
+    background-color: #E9E9E9 !important;
+}
+
+.proxy-underline.annotation-invisible {
+    background-color: transparent !important;
+}
+
+.highlight {
+    display: inline-block;
+}
+
+.highlight.annotation-hidden {
+    background: none !important;
+    border-color: transparent !important;
+    border-bottom: 0px !important;
+}
+
+.highlight.annotation-invisible {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.summary-item:not(.selected) .highlight:not(.annotation-hidden),
+.summary-item:not(.selectable) .highlight:not(.annotation-hidden) {
+    border-color: #909090 !important;
+}
+
+.highlight.annotation-inactive {
+    border-color: #E9E9E9 !important;
+}
+
+.display .proxy-scroll.hidden {
+    visibility: hidden;
+}
+
+#document-header {
+    min-height: 35px;
+    margin-bottom: 0px;
+    align-items: center;
+    color: black;
+    display: flex;
+}
+
+#summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 35px;
+    margin-bottom: 0px;
+    color: black;
+}
+
+.horizontal-layout #summary-header {
+    margin-top: 23px;
+}
+
+#summary-header-gap {
+    flex: 1 0 15px;
+}
+
+.highlight.selected {
+    border-color: transparent !important;
+}
+
+.highlight:not(.selected), .proxy-highlight:not(.selected) {
+    background-color: transparent !important;
+}
+
+.summary-item.annotate-entities .entity:not(.matches-ngram) {
+    color: #fb425c;
+    font-weight: 500;
+}
+
+.summary-item.annotate-lexical .highlight.matches-ngram {
+    padding: 0px;
+    border-bottom: 0px !important;
+}
+
+.doc .highlight {
+    padding: 0px;
+    border: 0px !important;
+}
+
+ul.annotation-key {
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+    justify-content: flex-start;
+    padding: 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+.annotation-key li {
+    margin-right: 15px;
+    font-size: 13px;
+    padding: 6px 13px 6px 13px;
+}
+
+.annotation-key li.option {
+    border-radius: 13px;
+    cursor: pointer;
+    border: 1px solid #F3F3F3;
+}
+
+.annotation-key li.option.selected {
+    background-color: #F0F2F6;
+}
+
+.annotation-key-label {
+    margin: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.annotation-key-ngram {
+    border-bottom: 3px solid #66c2a5;
+    padding-bottom: 1px;
+}
+
+.annotation-key-semantic {
+    border-bottom: 4px dotted #66c2a5;
+    padding-bottom: 1px;
+}
+
+.annotation-key-novel {
+    font-weight: 500;
+    color: black;
+}
+
+.annotation-key-entity {
+    font-weight: 500;
+    color: #fb425c;
+}
+
+.annotation-key-stopword {
+    opacity: 70%;
+}
