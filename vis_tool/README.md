@@ -1,4 +1,4 @@
-# st_xsum
+# st_xsum / visualization
 Custom XSum visualization using streamlight
 
 # Steps to run
