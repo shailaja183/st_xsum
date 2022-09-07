@@ -58,12 +58,12 @@ Keyboard Shortcuts
 The following keyboard shortcuts are accessible in normal visualization or annotation state.\
 (When a menu is open, these keyboard shortcuts are disabled.) Note: On Mac, use Cmd instead of Ctrl.
 
-* ESC: clear any open menus (canceling possible modifications) and on-screen messages\
-* TAB: open the collection browser\
-* CTRL-F: search\
-* CTRL-G: next search result (after search)\
-* CTRL-H: repeat the previous annotation action on the current search result (after search)\
-* Left arrow: previous document (or search result)\
+* ESC: clear any open menus (canceling possible modifications) and on-screen messages
+* TAB: open the collection browser
+* CTRL-F: search
+* CTRL-G: next search result (after search)
+* CTRL-H: repeat the previous annotation action on the current search result (after search)
+* Left arrow: previous document (or search result)
 * Right arrow: next document (or search result)
 
 Example Walk-through
