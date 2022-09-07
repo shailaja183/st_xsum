@@ -1,119 +1,164 @@
-# brat rapid annotation tool (brat) #
+Using BRAT
+==========
 
-## Documentation ##
+Setting up BRAT
+---------------
 
-In an attempt to keep all user-facing documentation in one place, please visit
-the [brat homepage][brat] which contains extensive documentation and examples
-of how to use and configure brat. We apologise for only providing minimal
-documentation along with the installation package but the risk of having
-out-dated documentation delivered to our end-users is unacceptable.
+Download following repositories/data;
 
-If you find bugs in your brat installation or errors in the documentation,
-please file an issue at our [issue tracker][brat_issues] and we will strive to
-address it promptly.
+(1) git clone https://github.com/shailaja183/st_xsum.git
 
-[brat]:         http://brat.nlplab.org
-[brat_issues]:  https://github.com/nlplab/brat/issues
+For now, I did standalone/quickstart installation using following;
 
-## About brat ##
+(2) conda create -n brat python=3.6
+(3) cd ./brat-master/
+(4) ./install.sh
+(5) python standalone.py
 
-*brat* (brat rapid annotation tool) is based on the [stav][stav] visualiser
-which was originally made in order to visualise
-[BioNLP'11 Shared Task][bionlp_2011_st] data. brat aims to provide an
-intuitive and fast way to create text-bound and relational annotations.
-Recently, brat has been widely adopted in the community. It has been used to
-create well-over 50,000 annotations by the [Genia group][genia] and several
-other international research groups for a number of annotation projects.
+Check out documentation at http://brat.nlplab.org/installation.html for installing brat server configuration.
 
-[stav]:             https://github.com/nlplab/stav/
-[bionlp_2011_st]:   http://2011.bionlp-st.org/
-[genia]:            http://www.geniaproject.org/
+For first time installation, it would prompt you to provide username, password and email address (which is mandatory). Note it down as you might be prompted again in future. 
 
-brat aims to overcome short-comings of previous annotation tools such as:
+(6) Open http://0.0.0.0:8001 in your browser (works best with Chrome and Safari). 
 
-* De-centralisation of configurations and data, causing synchronisation issues
-* Annotations and related text not being visually adjacent
-* Complexity of set-up for annotators
-* Etc.
+Loading annotation examples in BRAT
+-----------------------------------
 
-brat does this by:
+(1) Open menu will load by-default.
 
-* Data and configurations on a central web server (as Mark Twain said:
-    "Put all your eggs in one basket, and then guard that basket!")
-* Present text as it would appear to a reader and maintain annotations close
-    to the text
-* Zero set-up for annotators, leave configurations and server/data maintenance
-    to other staff
+(2) Go to examples/xsum/<directory_you_are_assigned_to_annotate>
 
-## License ##
+Double click to go inside a selected directory
+Double click ../ to move one level back in directory hierarchy
 
-brat itself is available under the permissive [MIT License][mit] but
-incorporates software using a variety of open-source licenses, for details
-please see see LICENSE.md.
+(3) Select the first file in your desired directory, Press 'OK'
 
-[mit]:  http://opensource.org/licenses/MIT
+Navigating in BRAT
+------------------
 
-## Citing ##
+(1) You can pause/resume your annotation anytime. It would be easier to open example if you note down the id.
 
-If you do make use of brat or components from brat for annotation purposes,
-please cite the following publication:
+(2) At any point in time, if you think you need to edit your response, hover over top bar showing file name i.e. examples/xsum/<directory_you_are_assigned_to_annotate>, it will pull up a menu. Then press 'Collection' and choose file you want to edit. 
+There is also 'Search' (by keyword) button if you do not remember the id of the example you want to edit. 
 
-    @inproceedings{,
-        author      = {Stenetorp, Pontus and Pyysalo, Sampo and Topi\'{c}, Goran
-                and Ohta, Tomoko and Ananiadou, Sophia and Tsujii, Jun'ichi},
-        title       = {{brat}: a Web-based Tool
-                for {NLP}-Assisted Text Annotation},
-        booktitle   = {Proceedings of the Demonstrations Session
-                at {EACL} 2012},
-        month       = {April},
-        year        = {2012},
-        address     = {Avignon, France},
-        publisher   = {Association for Computational Linguistics},
-    }
+(3) If you want to change the reasoning type, simply double click the incorrect reasoning category over the phrase and change the type. 
 
-If you make use of brat or its components solely for visualisation purposes,
-please cite the following publication:
+(4) If you want to change the reasoning span, double click the current reasoning category assigned to the span, then select 'Move'. Then reselect the correct span. 
 
-    @InProceedings{stenetorp2011supporting,
-      author    = {Stenetorp, Pontus and Topi\'{c}, Goran and Pyysalo, Sampo
-          and Ohta, Tomoko and Kim, Jin-Dong and Tsujii, Jun'ichi},
-      title     = {BioNLP Shared Task 2011: Supporting Resources},
-      booktitle = {Proceedings of BioNLP Shared Task 2011 Workshop},
-      month     = {June},
-      year      = {2011},
-      address   = {Portland, Oregon, USA},
-      publisher = {Association for Computational Linguistics},
-      pages     = {112--120},
-      url       = {http://www.aclweb.org/anthology/W11-1816}
-    }
+(5) This interface is sensitive to spaces so please avoid selecting unnecessary spaces before or after the phrase. 
 
-Lastly, if you have enough space we would be very happy if you also link to
-the brat homepage:
+(6) If you are not confident of a reasoning category, feel free to add 'Note' while you assign reasoning type. 
 
-    ...the brat rapid annotation tool\footnote{
-        \url{http://brat.nlplab.org}
-    }
+Key-board Shortcuts
+-------------------
 
-## Contributing ##
+The following keyboard shortcuts are accessible in normal visualization or annotation state. (When a menu is open, these keyboard shortcuts are disabled.) Note: On Mac, use Cmd instead of Ctrl.
 
-As with any software brat is under continuous development. If you have
-requests for features please [file an issue][brat_issues] describing your
-request. Also, if you want to see work towards a specific feature feel free to
-contribute by working towards it. The standard procedure is to fork the
-repository, add a feature, fix a bug, then file a pull request that your
-changes are to be merged into the main repository and included in the next
-release. If you seek guidance or pointers please notify the brat developers
-and we will be more than happy to help.
+ESC: clear any open menus (canceling possible modifications) and on-screen messages
+TAB: open the collection browser
 
-If you send a pull request you agree that the code will be distributed under
-the same license as brat (MIT). Additionally, all non-anonymous contributors
-are recognised in the CONTRIBUTORS.md file.
+CTRL-F: search
+CTRL-G: next search result (after search)
+CTRL-H: repeat the previous annotation action on the current search result (after search)
+Left arrow: previous document (or search result)
+Right arrow: next document (or search result)
 
-## Contact ##
+Example Walk-through
+--------------------
 
-For help and feedback please contact the authors below, preferably with all on
-them on CC since their responsibilities and availability may vary:
+File starting with ID 00000000 is annotated for demonstration purpose. Following is the explanation about how reasoning categories are assigned. 
 
-* Goran Topić       &lt;amadanmath gmail com&gt;
-* Sampo Pyysalo     &lt;sampo.pyysalo gmail com&gt;
-* Pontus Stenetorp  &lt;pontus stenetorp se&gt;
+ex. 00000000_berts2s  
+Does not contain the summary, so no annotation is required. Simply skip and move to next example. 
+
+ex. 00000000_gold
+Contains the summary. So read the article and the summary.
+Observe hallucination span 'ten sentences in total' in the summary.
+Now try to break-down hallucination span into small phrases and assign reasoning categories to each. 
+
+In this case,
+
+(i) ten - any person or model with commonsense knowledge would be able to conlude that the count of number of sentences in article is 'ten' though it is not provided anywhere in the article. Counting ability can be considered under 'numerical reasoning' as per definition below.
+
+(ii) sentences - this phrase is a direct variation of the word 'sentence' which is present in the article. So this is not considered as reasoning and we will not assign any category to this phrase. (tl;dr - copying is not reasoning)
+
+
+Annotation Guidelines
+---------------------
+
+More generally, 
+
+(1) Check if Summary exists. If not, simply go to next instance
+(using the right arrow on the keyboard or right arrow on top-left corner)
+
+(2) Carefully read the article and summary
+
+(3) Carefully observe hallucination spans (with black headings Hallucination) in the summary
+
+(4) Assign Reasoning categories to various phrases WITHIN the hallucination spans by double clicking the phrase.
+
+Choose the reasoning category based on the following definition. 
+It will automatically save your responses to corresponding .ann file. 
+
+(5) If you think a portion of the hallucination span cannot be concluded from the article or is incorrect, do not assign a reasoning category to it. 
+
+(6) It is possible that one summary can have multiple hallucination span and each hallucination span can have multiple reasoning categories for sub-phrases. 
+
+Reasoning categories definition and examples
+--------------------------------------------
+
+(i) Adjective - "Adjective or Adverb" (inferred about a person or an event in the article) is the key component of the hallucination span
+ex. 
+Body of a man found -> <Ajdective> Dead </Ajdective> man
+Fire broke out -> <Ajdective> Severely <Ajdective> burnt
+
+(ii) CommonNoun - "Common Noun" (inferred about a person or an event in the article) is the key component of the hallucination span - often includes gender pronoun, citizenship, nationality, titles (sir, professor, captain etc.)
+ex. 
+2 year-old boy, James -> <CommonNoun> Toddler </CommonNoun> James
+Alex Ferguson -> <CommonNoun> Coach </CommonNoun> Ferguson
+Comedian -> <CommonNoun> French </CommonNoun> comedian
+
+(iii) ProperNoun - "Proper Noun" (inferred about a person or an event in the article) is the key component of the hallucination span - often includes first name, last name. 
+ex.
+Obama -> <ProperNoun> Barack </ProperNoun> Obama
+Leonardo -> Leonardo <ProperNoun> DiCaprio </ProperNoun> 
+
+(iv) Professional - Inference about person's occupation, organization, community or professional associations, work related taxonomies
+ex. 
+Barack Obama -> <Professional> Senator </Professional> Obama 
+US President -> Works in <Professional> White House </Professional> 
+Trump -> Is a <Professional> Republican representative </Professional>
+Clothing -> Is a type of <Professional> Textile </Professional>
+
+(v) Causal - "Verb" (inferred about a person or an event in the article, that is not present in the article) is the key component of the hallucination span
+ex.
+Activity A banned -> <Causal> Illegal </Causal> to do A 
+Earthquake strikes -> <Causal> Forced </Causal> people to come out
+
+(vi) Numeric - Inference related to quantity/amount/calculation about a particular item based on the article - includes alternative forms such as \% or fractions. Close estimates are also considered.
+ex. 
+Person A, B, C -> <Numeric> 3 </Numeric> people 
+quarter -> <Numeric> ~26% </Numeric>  
+100 to 120 price change -> <Numeric> 20% increase </Numeric> 
+
+(vii) Temporal - Date/month/year/time elapsed/relative time/duration/season related keywords or inference based on the article (but not directly provided)
+ex.
+War in 1987-1990 -> <Temporal> 3 </Temporal> years of war 
+1984 -> <Temporal> Mid-1980s </Temporal> 
+Retire next month -> <Temporal> Last </Temporal> working month
+
+(viii) Geographical - Inference related to geographical relationship between places - includes relative or approximate location using directions east/west/north/south
+ex. 
+Asia -> Is a <Geographical> Continent </Geographical>  
+Michigan -> Is a <Geographical> State in US </Geographical>  
+NY -> Is in <Geographical> eastern part of US </Geographical> 
+
+(ix) ExpertKnowledge - Specific information about an entity or an event which is not expected to be a common knowledge and less likely to find a similar instance across the dataset- ex. person's birthday/age, event specifics, company’s  turnover/profits.
+ex.
+Roger Moore -> is a former <ExpertKnowledge> James Bond star <\ExpertKnowledge>
+Nicholas winton -> <ExpertKnowledge> died aged 106 <\ExpertKnowledge> 
+IBM -> Had <ExpertKnowledge> profits of \$125M in 2010 <\ExpertKnowledge>
+ Fiji -> Has <ExpertKnowledge> 800 islands <\ExpertKnowledge> 
+ 2020 Olympics -> Was <ExpertKnowledge> held in Tokyo <\ExpertKnowledge>
+
+(x) Other - There is still some reasoning going on (which requires implicit inference based on the article) but does not fit into any of the above categories/description. Try to explain why do you think a phrase belongs to other category by adding a 'Note' while you assign reasoning type. 
