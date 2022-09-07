@@ -29,7 +29,7 @@ Loading annotation examples in BRAT
 
 * 'Open' dialog-box will load by default
 
-* Go to example-data/xsum/<directory_you_are_assigned_to_annotate>
+* Go to example-data/tutorials/xsum/<directory_you_are_assigned_to_annotate>
 
 Double click to go inside a selected directory\
 Double click ../ to move one level back in the directory hierarchy
@@ -41,7 +41,7 @@ Navigating in BRAT
 
 * You can pause/resume your annotation anytime. It would be easier to open an example if you note down the id.
 
-* At any point in time, if you think you need to edit your response, hover over the top bar showing the file name i.e. example-data/xsum/<directory_you_are_assigned_to_annotate>, it will pull up a menu. Then press 'Collection' and choose the file you want to edit. 
+* At any point in time, if you think you need to edit your response, hover over the top bar showing the file name i.e. example-data/tutorials/xsum/<directory_you_are_assigned_to_annotate>, it will pull up a menu. Then press 'Collection' and choose the file you want to edit. 
 There is also a 'Search' (by keyword) button if you do not remember the id of the example you want to edit. 
 
 * If you want to change the reasoning type, simply double-click the incorrect reasoning category over the phrase and change the type. 
