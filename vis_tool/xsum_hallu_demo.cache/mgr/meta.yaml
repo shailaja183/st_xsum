@@ -1,0 +1,123 @@
+_column_order:
+- document
+- id
+- summary:reference
+- summary:berts2s
+- hallu:reference
+- reason:reference
+- preprocessed_document
+- preprocessed_summary:reference
+- preprocessed_summary:berts2s
+- spacy:document
+- spacy:summary:reference
+- spacy:summary:berts2s
+- BertscoreAligner:spacy:summary:reference:['spacy:summary:berts2s']
+- BertscoreAligner:spacy:document:spacy:summary:reference
+- BertscoreAligner:spacy:document:spacy:summary:berts2s
+- StaticEmbeddingAligner:spacy:summary:reference:['spacy:summary:berts2s']
+- StaticEmbeddingAligner:spacy:document:spacy:summary:reference
+- StaticEmbeddingAligner:spacy:document:spacy:summary:berts2s
+- NGramAligner:spacy:summary:reference:['spacy:summary:berts2s']
+- NGramAligner:spacy:document:spacy:summary:reference
+- NGramAligner:spacy:document:spacy:summary:berts2s
+columns:
+  BertscoreAligner:spacy:document:spacy:summary:berts2s:
+    dtype: &id001 !!python/name:meerkat.columns.list_column.ListColumn ''
+    len: 3
+  BertscoreAligner:spacy:document:spacy:summary:reference:
+    dtype: *id001
+    len: 3
+  BertscoreAligner:spacy:summary:reference:['spacy:summary:berts2s']:
+    dtype: *id001
+    len: 3
+  NGramAligner:spacy:document:spacy:summary:berts2s:
+    dtype: *id001
+    len: 3
+  NGramAligner:spacy:document:spacy:summary:reference:
+    dtype: *id001
+    len: 3
+  NGramAligner:spacy:summary:reference:['spacy:summary:berts2s']:
+    dtype: *id001
+    len: 3
+  StaticEmbeddingAligner:spacy:document:spacy:summary:berts2s:
+    dtype: *id001
+    len: 3
+  StaticEmbeddingAligner:spacy:document:spacy:summary:reference:
+    dtype: *id001
+    len: 3
+  StaticEmbeddingAligner:spacy:summary:reference:['spacy:summary:berts2s']:
+    dtype: *id001
+    len: 3
+  document:
+    block:
+      block_dir: blocks/140280102995600
+      block_index: document
+      mmap: false
+    dtype: &id002 !!python/name:meerkat.columns.pandas_column.PandasSeriesColumn ''
+    len: 3
+  hallu:reference:
+    block:
+      block_dir: blocks/140280102995600
+      block_index: hallu:reference
+      mmap: false
+    dtype: *id002
+    len: 3
+  id:
+    block:
+      block_dir: blocks/140280102995600
+      block_index: id
+      mmap: false
+    dtype: *id002
+    len: 3
+  preprocessed_document:
+    block:
+      block_dir: blocks/140280102995600
+      block_index: preprocessed_document
+      mmap: false
+    dtype: *id002
+    len: 3
+  preprocessed_summary:berts2s:
+    block:
+      block_dir: blocks/140280102995600
+      block_index: preprocessed_summary:berts2s
+      mmap: false
+    dtype: *id002
+    len: 3
+  preprocessed_summary:reference:
+    block:
+      block_dir: blocks/140280102995600
+      block_index: preprocessed_summary:reference
+      mmap: false
+    dtype: *id002
+    len: 3
+  reason:reference:
+    block:
+      block_dir: blocks/140280102995600
+      block_index: reason:reference
+      mmap: false
+    dtype: *id002
+    len: 3
+  spacy:document:
+    dtype: &id003 !!python/name:meerkat.columns.spacy_column.SpacyColumn ''
+    len: 3
+  spacy:summary:berts2s:
+    dtype: *id003
+    len: 3
+  spacy:summary:reference:
+    dtype: *id003
+    len: 3
+  summary:berts2s:
+    block:
+      block_dir: blocks/140280102995600
+      block_index: summary:berts2s
+      mmap: false
+    dtype: *id002
+    len: 3
+  summary:reference:
+    block:
+      block_dir: blocks/140280102995600
+      block_index: summary:reference
+      mmap: false
+    dtype: *id002
+    len: 3
+dtype: !!python/name:meerkat.block.manager.BlockManager ''

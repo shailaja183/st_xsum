@@ -1,0 +1,24 @@
+column_dtypes:
+  BertscoreAligner:spacy:document:spacy:summary:berts2s: &id001 !!python/name:meerkat.columns.list_column.ListColumn ''
+  BertscoreAligner:spacy:document:spacy:summary:reference: *id001
+  BertscoreAligner:spacy:summary:reference:['spacy:summary:berts2s']: *id001
+  NGramAligner:spacy:document:spacy:summary:berts2s: *id001
+  NGramAligner:spacy:document:spacy:summary:reference: *id001
+  NGramAligner:spacy:summary:reference:['spacy:summary:berts2s']: *id001
+  StaticEmbeddingAligner:spacy:document:spacy:summary:berts2s: *id001
+  StaticEmbeddingAligner:spacy:document:spacy:summary:reference: *id001
+  StaticEmbeddingAligner:spacy:summary:reference:['spacy:summary:berts2s']: *id001
+  document: &id002 !!python/name:meerkat.columns.pandas_column.PandasSeriesColumn ''
+  hallu:reference: *id002
+  id: *id002
+  preprocessed_document: *id002
+  preprocessed_summary:berts2s: *id002
+  preprocessed_summary:reference: *id002
+  reason:reference: *id002
+  spacy:document: &id003 !!python/name:meerkat.columns.spacy_column.SpacyColumn ''
+  spacy:summary:berts2s: *id003
+  spacy:summary:reference: *id003
+  summary:berts2s: *id002
+  summary:reference: *id002
+dtype: !!python/name:meerkat.datapanel.DataPanel ''
+len: 3
