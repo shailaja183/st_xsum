@@ -107,11 +107,11 @@ More generally,
 Reasoning categories definition and examples
 --------------------------------------------
 
-1. Adjective - "Adjective or Adverb" (inferred about a person or an event in the article) is the key component of the hallucination span\
+(1) Adjective - "Adjective or Adverb" (inferred about a person or an event in the article) is the key component of the hallucination span\
 * Body of a man found -> \<Adjective\> Dead \</Adjective\> man
 * Fire broke out -> \<Adjective\> Severely \</Adjective\> burnt
 
-2. CommonNoun - "Common Noun" (inferred about a person or an event in the article) is the key component of the hallucination span - often includes gender pronoun, citizenship, nationality, titles (sir, professor, captain etc.)
+(2) CommonNoun - "Common Noun" (inferred about a person or an event in the article) is the key component of the hallucination span - often includes gender pronoun, citizenship, nationality, titles (sir, professor, captain etc.)
 * 2 year-old boy, James -> \<CommonNoun\> Toddler \</CommonNoun\> James
 * Alex Ferguson -> \<CommonNoun\> Coach \</CommonNoun\> Ferguson
 * Comedian -> \<CommonNoun\> French \</CommonNoun\> comedian
