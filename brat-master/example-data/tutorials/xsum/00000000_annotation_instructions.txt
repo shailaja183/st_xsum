@@ -1,0 +1,85 @@
+Annotation Guidelines
+=================
+
+* Check if the summary exists. If not, simply go to the next instance (using the right arrow on the keyboard or right arrow on the top-left corner)
+
+* Carefully read the article and summary
+
+* Carefully observe hallucination spans (with black heading 'Hallucination') in the summary
+
+* Assign Reasoning categories to various phrases WITHIN the hallucination spans by double clicking the phrase. Choose the reasoning category based on the following definition. 
+
+Select Phrase > Double click > Choose 'Entity type'
+
+It will automatically save your responses to the corresponding .ann file.
+
+* For each phrase (for which you assign the reasoning category), mention how confident you are in your judgement. 
+
+Select Phrase > Double click > Choose 'Entity attributes' > Confidence (High ↑ / Neutral ↔ / Low ↓)
+
+* For each phrase (for which you assign the reasoning category), select whether you think is factually correct/incorrect or its facuality cannot be determined. 
+
+Select Phrase > Double click > Choose 'Entity attributes' > Factuality (Correct ✓ / Incorrect ✕ / Unknown !)
+
+When you double click the phrase, under 'Search' heading, you would be able to do quick Google/Wikipedia search about the phrase. Feel free to use it to verify factuality. 
+
+* It is possible that one summary can have multiple hallucination spans and each hallucination span can have multiple reasoning categories for sub-phrases.
+
+Reasoning categories definition and examples
+===================================
+
+(1) Adjective - "Adjective or Adverb" (inferred about a person or an event in the article) is the key component of the hallucination span\
+
+Body of a man found -> dead man 
+Fire broke out -> severely burnt 
+
+(2) CommonNoun - "Common Noun" (inferred about a person or an event in the article) is the key component of the hallucination span - often includes gender pronoun, citizenship, nationality, titles (sir, professor, captain etc.)
+
+2 year-old boy, James -> Toddler James 
+Alex Ferguson -> Coach Ferguson 
+Comedian -> French comedian 
+
+(3) ProperNoun - "Proper Noun" (inferred about a person or an event in the article) is the key component of the hallucination span - often includes first name, last name
+
+Obama -> Barack Obama 
+Leonardo -> Leonardo DiCaprio 
+
+(4) Professional - Inference about person's occupation, organization, community or professional associations, work-related taxonomies
+
+Barack Obama -> Senator Obama 
+US President -> works in the White House 
+Trump -> Republican representative Trump 
+Clothing -> Is a type of Textile 
+
+(5) Causal - "Verb" (inferred about a person or an event in the article, that is not present in the article) is the key component of the hallucination span
+
+Activity A banned -> Illegal to do A
+Earthquake strikes -> Forced people to come out
+
+(6) Numeric - Inference related to quantity/amount/calculation about a particular item based on the article - includes alternative forms such as % or fractions. Close estimates are also considered
+
+Person A, B, C -> 3 people
+quarter -> ~26% 
+100 to 120 price change -> 20% increase
+
+(7) Temporal - Date/month/year/time elapsed/relative time/duration/season related keywords or inference based on the article (but not directly provided)
+
+War in 1987-1990 -> 3 years of war
+In 1984 -> In mid-1980s
+Retire next month -> Last working month
+
+(8) Geographical - Inference related to the geographical relationship between places - includes relative or approximate location using directions east/west/north/south
+
+Asia -> Is a Continent 
+Michigan -> Is a State in US 
+NY -> Is in eastern part of US 
+
+(9) ExpertKnowledge - Specific information about an entity or an event that is not expected to be common knowledge and less likely to find a similar instance across the dataset- ex. person's birthday/age, event specifics, company’s turnover/profits.
+
+Roger Moore -> is a former James Bond star 
+Nicholas winton -> died aged 106 
+IBM -> Had profits of $125M in 2010 
+Fiji -> Has 800 islands 
+2020 Olympics -> Was held in Tokyo
+
+(10) Other - There is still some reasoning going on (which requires implicit inference based on the article) but does not fit into any of the above categories/descriptions. Try to explain why you think a phrase belongs to 'other' category by adding a 'Note' while you assign a reasoning type.

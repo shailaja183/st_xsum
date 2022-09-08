@@ -1,0 +1,96 @@
+T1	Adjective 1696 1700	dead
+T2	Adjective 1724 1732	severely
+T3	CommonNoun 1995 2002	Toddler
+T4	CommonNoun 2027 2032	Coach
+T5	CommonNoun 2055 2061	French
+T6	ProperNoun 2253 2259	Barack
+T7	ProperNoun 2288 2296	DiCaprio
+T8	Professional 2450 2457	Senator
+T9	Professional 2481 2505	works in the White House
+T10	Professional 2516 2526	Republican
+T11	Professional 2574 2581	Textile
+T12	Causal 2762 2769	Illegal
+T13	Causal 2800 2806	Forced
+T14	Numeric 3043 3044	3
+T15	Numeric 3063 3067	~26%
+T16	Numeric 3096 3108	20% increase
+T17	Temporal 3284 3291	3 years
+T18	Temporal 3313 3322	mid-1980s
+T19	Temporal 3344 3348	Last
+T20	Geographic 3546 3555	Continent
+T21	Geographic 3574 3585	State in US
+T22	Geographic 3599 3617	eastern part of US
+T23	ExpertKnowledge 3898 3913	James Bond star
+T24	Adjective 3891 3897	former
+T25	ExpertKnowledge 3934 3947	died aged 106
+T26	ExpertKnowledge 3960 3984	profits of $125M in 2010
+T27	ExpertKnowledge 3998 4009	800 islands
+T28	ExpertKnowledge 4032 4045	held in Tokyo
+T29	Causal 3349 3356	working
+T30	Causal 2817 2825	come out
+T31	CommonNoun 2527 2541	representative
+T32	Causal 1733 1738	burnt
+A1	Factuality T1 Correct
+A2	Confidence T1 High
+A3	Factuality T2 Correct
+A4	Confidence T2 High
+A5	Factuality T32 Correct
+A6	Confidence T32 High
+A7	Factuality T3 Correct
+A8	Confidence T3 High
+A9	Factuality T4 Correct
+A10	Confidence T4 High
+A11	Factuality T5 Unknown
+A12	Confidence T5 High
+A13	Factuality T6 Correct
+A14	Confidence T6 High
+A15	Factuality T7 Correct
+A16	Confidence T7 High
+A17	Factuality T8 Correct
+A18	Confidence T8 High
+A19	Factuality T9 Correct
+A20	Confidence T9 High
+A21	Factuality T10 Correct
+A22	Confidence T10 High
+A23	Factuality T31 Correct
+A24	Confidence T31 High
+A25	Factuality T11 Correct
+A26	Confidence T11 High
+A27	Factuality T12 Correct
+A28	Confidence T12 High
+A29	Factuality T13 Correct
+A30	Confidence T13 High
+A31	Factuality T30 Correct
+A32	Confidence T30 High
+A33	Factuality T14 Correct
+A34	Confidence T14 High
+A35	Factuality T15 Correct
+A36	Confidence T15 High
+A37	Factuality T16 Correct
+A38	Confidence T16 High
+A39	Factuality T17 Correct
+A40	Confidence T17 High
+A41	Factuality T18 Correct
+A42	Confidence T18 High
+A43	Factuality T19 Correct
+A44	Confidence T19 High
+A45	Factuality T29 Correct
+A46	Confidence T29 High
+A47	Factuality T20 Correct
+A48	Confidence T20 High
+A49	Factuality T21 Correct
+A50	Confidence T21 High
+A51	Factuality T22 Correct
+A52	Confidence T22 High
+A53	Factuality T24 Correct
+A54	Confidence T24 High
+A55	Factuality T23 Correct
+A56	Confidence T23 High
+A57	Factuality T25 Correct
+A58	Confidence T25 High
+A59	Factuality T26 Unknown
+A60	Confidence T26 High
+A61	Factuality T27 Correct
+A62	Confidence T27 High
+A63	Factuality T28 Correct
+A64	Confidence T28 High

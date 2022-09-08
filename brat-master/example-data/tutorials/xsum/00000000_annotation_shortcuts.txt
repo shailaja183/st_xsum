@@ -1,0 +1,41 @@
+Navigating in BRAT
+================
+
+* You can pause/resume your annotation anytime. It would be easier to open an example if you note down the id.
+
+* At any point in time, if you think you need to edit your response, hover over the top bar showing the file name i.e. example-data/tutorials/xsum/<directory_you_are_assigned_to_annotate>, it will pull up a menu. Then press 'Collection' and choose the file you want to edit. There is also a 'Search' (by keyword) button if you do not remember the id of the example you want to edit.
+
+* If you want to change the reasoning type, simply double-click the incorrect reasoning category over the phrase and change the type.
+
+* If you want to change the reasoning span, double-click the current reasoning category assigned to the span, then select 'Move'. Then reselect the correct span.
+
+* This interface is sensitive to spaces so please avoid selecting unnecessary spaces before or after the phrase.
+
+* If you are not confident of a reasoning category, feel free to add 'Note' while you assign a reasoning type.
+
+Keyboard Shortcuts
+=================
+
+* The following keyboard shortcuts are accessible in normal visualization or annotation state.
+(When a menu is open, these keyboard shortcuts are disabled.) Note: On Mac, use Cmd instead of Ctrl.
+
+ESC: clear any open menus (canceling possible modifications) and on-screen messages
+TAB: open the collection browser
+CTRL-F: search
+CTRL-G: next search result (after search)
+CTRL-H: repeat the previous annotation action on the current search result (after search)
+Left arrow: previous document (or search result)
+Right arrow: next document (or search result)
+
+* Keyboard shortcuts for quick entity type selection in annotation.
+
+A   Adjective
+C   CommonNoun
+V   Causal	
+E   ExpertKnowledge
+G   Geographic
+N   Numeric
+R   Professional
+P   ProperNoun
+T   Temporal
+O   Other
